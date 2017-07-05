@@ -22,12 +22,15 @@ Select the contiguous selection tool (the magic wand) and try to select the back
 Then push the "supr" key, a checkerboard should appear. It represents the alpha layer which figure transparency in the current layer.
 Remove everything useless until you have a picture similar to the shown one below.
 
+![Selection of the back board](./images/selectboard.jpg) ![Anti alias on the left](./images/selectalias.jpg) ![result](./images/drawwithoutboard.jpg)
 
 ### Putting it black and white
 
 There are a lot of tools to make this draw black and white, and the example here might not be applyable to every draw. But G'MIC offer so many possibilities that you should find out the best for you.
 First of all you have to select only the draw you want to put black and white (some tools turn the alpha layer to black or white). The easiest way to do it is to select the alpha layer background with the magic wander, then menu->invert selection.
 The tool I generally use, and that always gave me satisfaction for this kind of work, is in the G'MIC menu->Colors->Metallic look. Play with the strength and smoothness to get a satisfying result. For the example I used strength=0 and smoothness=0.
+
+![The draw with the Metallic filter applied](./images/black&whitedraw.jpg)
 
 ### Underlying the contours
 
@@ -38,15 +41,24 @@ Return to the Layer 1 and select again the draw (select the alpha, invert select
 Select the darkest point in the draw with the Color Selector Tool and fill the new contour with it.
 It's better, but this contour is too distinct. We have to blur it a bit. Select it again, grow the selection by few pixels (the order of magnitude of the overall natural draw blur), then menu Filter->Blur->Gaussian blur, and select about the half of the selection grow done before. Repeat the operation until you get a satifying result. When finished, select the both layers, right clic and Merge with layer below.
 
+![Fill the entire selection](./images/fillentireselection.jpg) ![The contour is white. Fill it with a darker color](./images/whitecontour.jpg) ![result](./images/bluredcontour.jpg)
+
 ### Add transparency
 
 Now we need that this draw seems directly applied on the skin. The tattoo is done with dark ink, so the white is the skin. Menu Filter->Colors->Color to alpha. Select the color that is the lighter (the color selection tool can help) and the threshold that makes the dark part a bit transparent. And validate.
 
+![Application of the transparency](./images/transparency.jpg)
+
 ### Add the red skin effect
 
-To make it seems that you just did it we will add some redskin effects.
+To make it seems that you just did it we will add some red skin effects.
 Right clic on Layer 1 and duplicate the layer. Select the Copy of Layer 1, menu Filter->Adjust->Color Balance, increase the Red and decrease the other colors for the shadows and midtones to get a dark red color. Then blur it for some pixels (20 to 40 in the example). Then adjust the two layers opacity to get some tending to the red.
+
+![Red tattoo background](./images/reddraw.jpg) ![Result after the blur](./images/redresult.jpg)
+
 Duplicate again the Layer 1. Select the draw (select the alpha then invert the selection). Grow the size by several pixels (50 pixels in the example) and fill it with a dark red (dry blood color). Then blur it a couple of time (100 pixel in this example). To finish adjust the different layers opacity to get a satifying result (for the next step, if you find out that it's too dark or ligh, you can go back and adjust it again).
+
+
 
 ### Apply the tattoo on the skin
 
@@ -54,8 +66,12 @@ Almost there!!
 Open the photo in which there is the skin surface to apply the tattoo. Copy the three layers tatto and past them on the back photo. Then Merge the three layers (select them, right clic, merge).
 Adjust the size and position of the new merged layer thanks to the Move Tool and Transform tools (keep the shift key to keep the scaling proportionnal).
 
+![Draw scaled and adjusted to the back position](./images/rotatedadjusted.jpg)
+
 The very last and important steps before the "post-production", is to adjust the draw surface to the skin surface. To do so, select the draw with a rectangle and use the Transform a Layer or a Selection tool. First of all you have to apply the perspective. Select Perspective in the Tool Options tab. In the example there's almost nothing to do, but the principle is to have the same perspective as the skin applied to the draw.
 Then the next step is to have a draw that follow the skin shape. Always in the transform tool, select Wrap in the Tool options. Then increase the subdivide to get a precise transformation. In the example we wrap the draw to follow the backbone. Use it also to follow the shoulder shape and other. That's it! The next step is for the final picture production.
+
+![Wraping the draw to follow the back bone](./images/surfacewrap.jpg)
 
 ### Final picture production
 
@@ -66,3 +82,5 @@ Then if the photo has some noisy pixels, select the draw layer, then only the dr
 Finally export the picture. Export it in JPG and put the quality at the limit to degrade the photo, it will degrade the draw to make it even more naturally integrated.
 
 That's it!
+
+![Final result](./images/final.jpg)
