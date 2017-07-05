@@ -92,6 +92,6 @@ Then, if the photo has some noisy pixels (photo taken in the dark), select the d
 
 Finally export the picture. Export it in JPG and put the quality at the limit to degrade the photo, it will degrade the tattoo draw to make it even more naturally integrated.
 
-That's it!
+That's it! A shark armed unicorn on my back!!!!
 
 ![Final result](./images/final.jpg)
