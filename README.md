@@ -15,7 +15,7 @@ I'll introduce here the various (only one for now) works I did with this tool se
 
 This tutorial describe how to use krita to make appears a tattoo on the skin. Useful to get a preview, or to do some stupid jokes. In this example we will start with two picture: the tattoo original image and a photo of a back:
 
-![A back photo](./images/dos.jpeg) ![A bad-ass chalk draw!](./images/yskjdkD.jpg)
+![A back photo](./images/dos.jpeg) ![A bad-ass chalk draw!](./images/yskjdkD.jpg "A back photo")
 
 ### Isolating the draw from the background
 
@@ -25,7 +25,7 @@ Select the contiguous selection tool (the magic wand) and try to select the back
 Then push the "supr" key, a checkerboard should appear. It represents the alpha layer which figure transparency in the current layer.
 Remove everything useless until you have a picture similar to the shown one below.
 
-![Selection of the back board](./images/selectboard.jpg) ![Anti alias on the right](./images/selectalias.jpg) ![Result](./images/drawwithoutboard.jpg)
+![Selection of the back board](./images/selectboard.jpg "Selection of the back board") ![Anti alias on the right](./images/selectalias.jpg "Anti alias on the right") ![Result](./images/drawwithoutboard.jpg "Result")
 
 ### Putting it black and white
 
@@ -35,7 +35,7 @@ First of all you have to select only the draw you want to put black and white (s
 
 The tool I generally use, and that always gave me satisfaction for this kind of work, is in Filter->G'MIC menu->Colors->Metallic look. Play with the strength and smoothness to get a satisfying result. For the example I used simply strength=0 and smoothness=0.
 
-![The draw with the Metallic filter applied](./images/black&whitedraw.jpg)
+![The draw with the Metallic filter applied](./images/black&whitedraw.jpg "The draw with the Metallic filter applied")
 
 ### Underlying the contours
 
@@ -48,13 +48,13 @@ Select the darkest point in the draw with the Color Selector Tool and fill the n
 
 It's better, but this contour is too distinct. We have to blur it a bit. Select the contour only again, grow the selection by few pixels (the order of magnitude of the overall natural draw blur), then menu Filter->Blur->Gaussian blur, and select about the half of the selection grow done before. Repeat the operation until you get a satisfying result. When finished, select the both layers, right click and Merge with layer below.
 
-![Fill the entire selection](./images/fillentireselection.jpg) ![The contour is white. Fill it with a darker color](./images/whitecontour.jpg) ![result](./images/bluredcontour.jpg)
+![Fill the entire selection](./images/fillentireselection.jpg "Fill the entire selection") ![The contour is white. Fill it with a darker color](./images/whitecontour.jpg "The contour is white. Fill it with a darker color") ![result](./images/bluredcontour.jpg "Result")
 
 ### Add transparency
 
 Now we need that this draw seems directly applied on the skin. The fake tattoo is done with dark ink, so the white is the skin. Menu Filter->Colors->Color to alpha. Select the color that is the lightest (the color selection tool can help) and the threshold that makes the dark part a bit transparent but not too much. And validate.
 
-![Application of the transparency](./images/transparency.jpg)
+![Application of the transparency](./images/transparency.jpg "Application of the transparency")
 
 ### Add the red skin effect
 
@@ -62,7 +62,7 @@ To make it seems that the tattoo was done recently we will add some red skin eff
 
 Right click on Layer 1 and duplicate the layer. Select the "Copy of Layer 1" layer, menu Filter->Adjust->Color Balance, increase the Red and decrease the other colors for the shadows and mid-tones to get a dark red color. Then blur it for some pixels (20 to 40 in the example). Then adjust the two layers opacity to get a dark result tending to the red.
 
-![Red tattoo background](./images/reddraw.jpg) ![Result after the blur](./images/redresult.jpg)
+![Red tattoo background](./images/reddraw.jpg "Red tattoo background") ![Result after the blur](./images/redresult.jpg "Result after the blur")
 
 Duplicate again the Layer 1. Select the draw (select the alpha then invert the selection). Grow the size by several pixels (50 pixels in the example) and fill it with a dark red (dry blood color). You can improve it with some noisy effect thanks to G'MIC if you want. Then blur it a couple of time (100 pixel in this example). To finish adjust the different layers opacity to get a satisfying result (for the next step, if you find out that it's too dark or light, you can go back and adjust it again).
 
@@ -75,12 +75,12 @@ Almost there!!
 Open the photo in which there is the skin surface to apply the tattoo. Copy the three layers tattoo and paste them on the back photo. Then Merge the three layers (select them, right click, merge).
 Adjust the size and position of the new merged layer thanks to the Move Tool and Transform tools (keep the shift key to keep the scaling proportional).
 
-![Draw scaled and adjusted to the back position](./images/rotatedadjusted.jpg)
+![Draw scaled and adjusted to the back position](./images/rotatedadjusted.jpg "Draw scaled and adjusted to the back position")
 
 The very last and important steps before the "post-production", is to adjust the draw surface to the skin surface. To do so, select the draw with a rectangle and use the "Transform a Layer or a Selection" tool. First of all you have to apply the perspective. Select "Perspective" in the Tool Options tab. In the example there's almost nothing to do, but the principle is to have the same perspective as the skin applied to the draw.
 Then the next step is to have a draw that follow the skin shape. Always in the transform tool, select Wrap in the Tool options. Then increase the subdivide to get a precise transformation. In the example we wrap the draw to follow the backbone. Use it also to follow the shoulder shape and other. That's it! The next step is for the final picture production.
 
-![Warping the draw to follow the back bone](./images/surfacewrap.jpg)
+![Warping the draw to follow the back bone](./images/surfacewrap.jpg "Warping the draw to follow the back bone")
 
 ### Final picture production
 
@@ -94,4 +94,4 @@ Finally export the picture. Export it in JPG and put the quality at the limit to
 
 That's it! A shark armed unicorn on my back!!!!
 
-![Final result](./images/final.jpg)
+![Final result](./images/final.jpg "A shark armed unicorn on my back!!!!")
