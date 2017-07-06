@@ -95,3 +95,8 @@ Finally export the picture. Export it in JPG and put the quality at the limit to
 That's it! A shark armed unicorn on my back!!!!
 
 ![Final result](./images/final.jpg "A shark armed unicorn on my back!!!!")
+
+
+### Auto-didactic bonus
+
+If you look at pictures with fresh tattoo, you see a small volume around the main contour stroke. In particular when it's close to a strong light. In the example the light is up, and should produce this effect. As training you can try to reproduce it. Hints: The procedure is close to the one used to create the contour, except that it should be an "internal" contour. Then you put in in white and blur it. To finish, just shift it (up in the example) and adjust the opacity to get the wanted effect.
